@@ -2,11 +2,11 @@
 <html lang="en">
 
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Bootstrap CSS -->
+  <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Google Fonts -->
@@ -15,226 +15,148 @@
   <!-- Font Awesome -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 
-    <title>Jayraj Hotel</title>
+  <title>Jayraj Hotel</title>
 
-    <style>
-        /* Global Styling */
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #fdfdfd;
-            color: #333;
-        }
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #fdfdfd;
+      color: #333;
+    }
 
-        h1,
-        h3 {
-            font-weight: 600;
-            color: #5a2d0c;
-        }
+    h1,
+    h3 {
+      font-weight: 600;
+      color: #5a2d0c;
+    }
 
-        h4 {
-            font-weight: 400;
-            color: #777;
-        }
+    h4 {
+      font-weight: 400;
+      color: #777;
+    }
 
-        /* Navbar */
-        .head {
-            background-color: #5a2d0c !important;
-        }
-        .navbar .navbar-brand,
-        .navbar .nav-link {
-            color: #fff !important;
-            font-weight: 500;
-        }
+    /* Navbar */
+    .head {
+      background-color: #5a2d0c !important;
+    }
 
-        .navbar .nav-link:hover {
-            color: #ffd700 !important;
-        }
+    .navbar .navbar-brand,
+    .navbar .nav-link {
+      color: #fff !important;
+      font-weight: 500;
+    }
 
-        /* Hero section */
-        main>div:first-child {
-            text-align: center;
-            padding: 40px 20px;
-        }
+    .navbar .nav-link:hover {
+      color: #ffd700 !important;
+    }
 
-        /* Fullscreen Banner */
-        .carousel-item img {
-            width: 100vw;
-            height: 100vh;
-            object-fit: cover;
-            border-radius: 10px;
-            padding: 20px;
-            border-radius:20px ;
-        }
+    /* Hero section */
+    main>div:first-child {
+      text-align: center;
+      padding: 40px 20px;
+    }
 
+    /* Carousel */
+    .carousel-item img {
+      width: 100%;
+      height: auto;
+      max-height: 70vh;
+      object-fit: cover;
+      border-radius: 20px;
+      padding: 10px;
+    }
 
-        /* Food Section Headings */
-        h3 {
-            margin-top: 50px;
-            text-align: center;
-            color: #c0392b;
-            font-size: 28px;
-            border-bottom: 3px solid #c0392b;
-            display: inline-block;
-            padding-bottom: 5px;
-        }
+    /* Section Headings */
+    h3 {
+      margin-top: 40px;
+      text-align: center;
+      color: #c0392b;
+      font-size: 24px;
+      border-bottom: 3px solid #c0392b;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
 
-        /* Cards */
-        .card {
-            border: none;
-            overflow: hidden;
-            border-radius: 15px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            transition: transform .3s ease, box-shadow .3s ease;
-        }
+    /* Cards */
+    .card {
+      border: none;
+      overflow: hidden;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform .3s ease, box-shadow .3s ease;
+    }
 
-        .card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-        }
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
 
-        .card img {
-            border-radius: 15px;
-            transition: .5s ease;
-        }
+    .card img {
+      border-radius: 15px;
+      transition: .5s ease;
+      width: 100%;
+      height: auto;
+    }
 
-        /* Hover effect text */
-        .middle {
-            transition: .5s ease;
-            opacity: 0;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-        }
+    .middle {
+      transition: .5s ease;
+      opacity: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
 
-        .card:hover img {
-            opacity: 0.5;
-        }
+    .card:hover img {
+      opacity: 0.5;
+    }
 
-        .card:hover .middle {
-            opacity: 1;
-        }
+    .card:hover .middle {
+      opacity: 1;
+    }
 
-        .text {
-            background-color: #04AA6D;
-            color: white;
-            font-size: 16px;
-            padding: 12px 24px;
-            border-radius: 8px;
-        }
+    .text {
+      background-color: #04AA6D;
+      color: white;
+      font-size: 16px;
+      padding: 10px 20px;
+      border-radius: 8px;
+    }
 
-        /* Section spacing */
-        .container.my-4 {
-            margin-top: 40px !important;
-            margin-bottom: 40px !important;
-        }
+    /* Signup Parallax */
+    .parallax {
+      background-image: url('assests/jayraj hotel banner');
+      min-height: 400px;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 10px;
+    }
 
-        /* login sections */
+    .content {
+      width: 100%;
+      max-width: 800px;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 15px;
+      padding: 20px;
+    }
 
-
-        .parallax {
-            /* the image used */
-            background-image: url('assests/jayraj hotel banner');
-            /* set a specific height */
-            min-height: 500px;
-            /* create the parallax scrolling effect */
-            background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-
-        .content {
-            height: auto;
-            /* background-color: rgb(98, 96, 96); */
-            padding-top: 60px;
-            text-align: center;
-            font-size: large;
-        }
-
-
-        .column {
-            float: left;
-            width: 50%;
-        }
-
-        .width {
-            width: 50%;
-        }
-
-        .card {
-            height: 100%;
-            margin: 0%;
-            padding: 0%;
-
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* this is for we are here for you section 
-        .contact-card {
-            background-color: #fff;
-            border-radius: 15px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-            margin: 20px;
-            padding: 20px;
-            margin-top: 50px;
-        }
-
-        .info-item {
-            font-size: 16px;
-            display: flex;
-            align-items: center;
-        }
-
-
-        /* this is for footer section 
-        .site-footer {
-            font-family: 'Segoe UI', sans-serif;
-            background-color: black;
-            color: white;
-        }
-
-        .site-footer a:hover {
-            color: #ffc107;
-            /* Golden hover 
-            text-decoration: underline;
-        }
-
-        .site-footer h5 {
-            font-weight: bold;
-            margin-bottom: 15px;
-        }
-
-        .site-footer .blockquote-footer {
-            font-size: 0.9rem;
-            color: black;
-        }
-
-        .site-footer .small {
-            text-align: center;
-
-        }
-
-        .light {
-            color: black;
-        } */
-
-
-        /* Contact Section */
+    /* Contact Section */
     .contact-card {
       background-color: #fff;
       border-radius: 15px;
-      padding: 30px;
+      padding: 20px;
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     }
 
     .info-item {
       font-size: 16px;
-      margin-bottom: 15px;
+      margin-bottom: 12px;
     }
 
     .info-item i {
@@ -246,12 +168,12 @@
     .site-footer {
       background-color: #4a2c2a;
       color: #fff;
-      padding: 40px 0;
+      padding: 30px 0;
     }
 
     .site-footer h5 {
       color: #ffd700;
-      margin-bottom: 20px;
+      margin-bottom: 15px;
     }
 
     .site-footer a {
@@ -265,451 +187,276 @@
 
     .site-footer .social-icons a {
       font-size: 20px;
-      margin-right: 15px;
+      margin-right: 12px;
       color: #fff;
     }
 
     .site-footer .social-icons a:hover {
       color: #ffd700;
     }
-
-    </style>
+  </style>
 </head>
 
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-dark head">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">Jayraj Hotel</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item"><a class="nav-link active" href="#index.htm">Home</a></li>ṇ
-                        <li class="nav-item"><a class="nav-link" href="#">Menu</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Specials</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
-                    </ul>
-                    <form class="d-flex">
-                        <input class="form-control me-2" type="search" placeholder="Search">
-                        <button class="btn btn-outline-warning" type="submit">Search</button>
-                    </form>
-                </div>
-            </div>
-        </nav>
-    </header>
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark head">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Jayraj Hotel</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Menu</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Specials</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+          </ul>
+          <form class="d-flex mt-2 mt-lg-0">
+            <input class="form-control me-2" type="search" placeholder="Search">
+            <button class="btn btn-outline-warning" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+  </header>
 
-    <main>
-        <div>
-            <h1>WELCOME TO JAYRAJ HOTEL</h1>
-            <h4>YOUR UNLIMITED CELEBRATION DESTINATION</h4>
-        </div>
+  <main>
+    <!-- Hero -->
+    <div>
+      <h1>WELCOME TO JAYRAJ HOTEL</h1>
+      <h4>YOUR UNLIMITED CELEBRATION DESTINATION</h4>
+    </div>
 
-        <!-- Fullscreen Carousel -->
-        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="assests/jayraj hotel banner" class="d-block w-100" alt="banner">
-                </div>
-            </div>
+    <!-- Carousel -->
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="assests/jayraj hotel banner" class="d-block w-100 img-fluid" alt="banner">
         </div>
+      </div>
+    </div>
 
+    <!-- Special Vegetables -->
+    <div class="text-center">
+      <h3>Special Vegetables</h3>
+    </div>
+    <div class="container my-4">
+      <div class="row justify-content-center g-4">
+        <div class="col-12 col-sm-6 col-md-4">
+          <div class="card position-relative">
+            <img src="assests/masalabhindi.jpeg" alt="Masala bhindi" class="img-fluid">
+            <div class="middle"><div class="text">Masala Bhindi</div></div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4">
+          <div class="card position-relative">
+            <img src="assests/paneer butter masla.jpeg" alt="Paneer Butter Masala" class="img-fluid">
+            <div class="middle"><div class="text">Paneer Butter Masala</div></div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4">
+          <div class="card position-relative">
+            <img src="assests/daltadka.jpeg" alt="Dal tadka" class="img-fluid">
+            <div class="middle"><div class="text">Dal Tadka</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-        <!-- Sections -->
-        <div class="text-center">
-            <h3>Special Vegetables</h3>
+    <!-- Foods -->
+    <div class="text-center">
+      <h3>Foods</h3>
+    </div>
+    <div class="container my-4">
+      <div class="row justify-content-center g-4">
+        <div class="col-12 col-sm-6 col-md-4">
+          <div class="card position-relative">
+            <img src="assests/Jeera Rice.jpeg" alt="Jeera Rice" class="img-fluid">
+            <div class="middle"><div class="text">Jeera Rice</div></div>
+          </div>
         </div>
-        <div class="container my-4">
-            <div class="row justify-content-center g-4">
-                <div class="col-md-4">
-                    <div class="card position-relative">
-                        <img src="assests/masalabhindi.jpeg" alt="Masala bhindi" class="img-fluid">
-                        <div class="middle">
-                            <div class="text">Masala Bhindi</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card position-relative">
-                        <img src="assests/paneer butter masla.jpeg" alt="paneer butter masala" class="img-fluid">
-                        <div class="middle">
-                            <div class="text">Paneer Butter Masala</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card position-relative">
-                        <img src="assests/daltadka.jpeg" alt="Dal tadka" class="img-fluid">
-                        <div class="middle">
-                            <div class="text">Dal Tadka</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="col-12 col-sm-6 col-md-4">
+          <div class="card position-relative">
+            <img src="assests/tandooro roti.jpeg" alt="Tandoori Roti" class="img-fluid">
+            <div class="middle"><div class="text">Tandoori Roti</div></div>
+          </div>
         </div>
+        <div class="col-12 col-sm-6 col-md-4">
+          <div class="card position-relative">
+            <img src="assests/boondi raita.jpeg" alt="Boondi Raita" class="img-fluid">
+            <div class="middle"><div class="text">Boondi Raita</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-        <div class="text-center">
-            <h3>Foods</h3>
+    <!-- Starter -->
+    <div class="text-center">
+      <h3>Starter</h3>
+    </div>
+    <div class="container my-4">
+      <div class="row justify-content-center g-4">
+        <div class="col-12 col-sm-6 col-md-4">
+          <div class="card position-relative">
+            <img src="assests/dosa.jpeg" alt="Dosa" class="img-fluid">
+            <div class="middle"><div class="text">Dosa</div></div>
+          </div>
         </div>
-        <div class="container my-4">
-            <div class="row justify-content-center g-4">
-                <div class="col-md-4">
-                    <div class="card position-relative">
-                        <img src="assests/Jeera Rice.jpeg" alt="Jeera Rice" class="img-fluid">
-                        <div class="middle">
-                            <div class="text">Jeera Rice</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card position-relative">
-                        <img src="assests/tandooro roti.jpeg" alt="Tandoori Roti" class="img-fluid">
-                        <div class="middle">
-                            <div class="text">Tandoori Roti</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card position-relative">
-                        <img src="assests/boondi raita.jpeg" alt="Boondi Raita" class="img-fluid">
-                        <div class="middle">
-                            <div class="text">Boondi Raita</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="col-12 col-sm-6 col-md-4">
+          <div class="card position-relative">
+            <img src="assests/idli.jpeg" alt="Idli" class="img-fluid">
+            <div class="middle"><div class="text">Idli</div></div>
+          </div>
         </div>
+        <div class="col-12 col-sm-6 col-md-4">
+          <div class="card position-relative">
+            <img src="assests/chai.jpeg" alt="Chai" class="img-fluid">
+            <div class="middle"><div class="text">Chai</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-        <div class="text-center">
-            <h3>Starter</h3>
+    <!-- Non-Veg Section -->
+    <div class="text-center">
+      <h3>Non-Vegetarian Section</h3>
+    </div>
+    <div class="container my-4">
+      <div class="row justify-content-center g-4">
+        <div class="col-12 col-sm-6 col-md-4">
+          <div class="card position-relative">
+            <img src="assests/Chicken Biryani.jpeg" alt="Chicken Biryani" class="img-fluid">
+            <div class="middle"><div class="text">Chicken Biryani</div></div>
+          </div>
         </div>
-        <div class="container my-4">
-            <div class="row justify-content-center g-4">
-                <div class="col-md-4">
-                    <div class="card position-relative">
-                        <img src="assests/dosa.jpeg" alt="Dosa" class="img-fluid">
-                        <div class="middle">
-                            <div class="text">Dosa</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card position-relative">
-                        <img src="assests/idli.jpeg" alt="Idli" class="img-fluid">
-                        <div class="middle">
-                            <div class="text">Idli</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card position-relative">
-                        <img src="assests/chai.jpeg" alt="Chai" class="img-fluid">
-                        <div class="middle">
-                            <div class="text">Chai</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="col-12 col-sm-6 col-md-4">
+          <div class="card position-relative">
+            <img src="assests/anda masla.jpeg" alt="Egg Curry" class="img-fluid">
+            <div class="middle"><div class="text">Egg Curry</div></div>
+          </div>
         </div>
+        <div class="col-12 col-sm-6 col-md-4">
+          <div class="card position-relative">
+            <img src="assests/fish roasted.jpeg" alt="Fish Roasted" class="img-fluid">
+            <div class="middle"><div class="text">Fish Roasted</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-        <div class="text-center">
-            <h3>Non-Vegetarian Section</h3>
-        </div>
-        <div class="container my-4">
-            <div class="row justify-content-center g-4">
-                <div class="col-md-4">
-                    <div class="card position-relative">
-                        <img src="assests/Chicken Biryani.jpeg" alt="Chicken Biryani" class="img-fluid">
-                        <div class="middle">
-                            <div class="text">Chicken Biryani</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card position-relative">
-                        <img src="assests/anda masla.jpeg" alt="Egg Curry" class="img-fluid">
-                        <div class="middle">
-                            <div class="text">Egg Curry</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card position-relative">
-                        <img src="assests/fish roasted.jpeg" alt="Fish Roasted" class="img-fluid">
-                        <div class="middle">
-                            <div class="text">Fish Roasted</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <!-- login sections -->
+    <!-- Signup Section -->
     <section id="SignUp">
-        <div class="parallax">
-            <div class="content">
-                <div class="container mt-5">
-                    <div class="card">
-                        <div class="card-title">
-                            <h1>SignUp section</h1>
-                        </div>
-                        <div class="card-body">
-                            <form class="row needs-validation" novalidate>
-                                <div class="col-md-4">
-                                    <label for="validationCustom01" class="form-label">First name</label>
-                                    <input type="text" class="form-control" id="validationCustom01"
-                                        placeholder="Enter your first name: " required>
-                                    <div class="valid-feedback">
-                                        Looks good
-                                    </div>
-                                </div> <br><br>
-
-                                <div class="col-md-4">
-                                    <label for="validationCustom02" class="form-label">Last name</label>
-                                    <input type="text" class="form-control" id="validationCustom02"
-                                        placeholder="Enter your last name: " required>
-                                    <div class="valid-feedback">
-                                        Looks good
-                                    </div>
-                                </div><br><br>
-
-                                <div class="col-md-4">
-                                    <label for="validationCustom03" class="form-label">City</label>
-                                    <input type="text" class="form-control" id="validationCustom03"
-                                        placeholder="Enter your city name: " required>
-                                    <div class="invalid-feedback">
-                                        Please provide a valid city
-                                    </div>
-                                </div><br><br>
-
-                                <div class="col-12">
-                                    <label for="validationCustom04" class="form-label">State</label>
-                                    <select id="validationCustom04" class="form-select" required>
-                                        <option selected disabled value="">Choose...</option>
-                                        <option>Chhattisgarh</option>
-                                        <option>Maharastra</option>
-                                        <option>Gujrat</option>
-                                        <option>Karnataka</option>
-                                        <option>Andhra Pradesh</option>
-                                    </select>
-                                    <div class="invalid-feedback">
-                                        please select a valid state.
-                                    </div>
-                                </div><br><br>
-
-
-                                <div class="col-3">
-                                    <div class="form-check">
-                                        <input type="checkbox" class="form-check-input" id="invalidCheck" required>
-                                        <label for="invalidCheck" class="form-check-label" style="text-align: left;">
-                                            Agree to terms and conditions
-                                        </label>
-                                        <div class="invalid-feedback">
-                                            You must agree before submitting.
-                                        </div>
-                                    </div>
-                                </div><br><br>
-                                <div class="col-12">
-                                    <button class="btn btn-dark cream" type="submit">Submit form</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
+      <div class="parallax">
+        <div class="content">
+          <div class="card">
+            <div class="card-body">
+              <h2 class="text-center mb-4">Sign Up</h2>
+              <form class="row g-3 needs-validation" novalidate>
+                <div class="col-12 col-md-6">
+                  <label for="validationCustom01" class="form-label">First name</label>
+                  <input type="text" class="form-control" id="validationCustom01" required>
+                  <div class="valid-feedback">Looks good!</div>
                 </div>
+                <div class="col-12 col-md-6">
+                  <label for="validationCustom02" class="form-label">Last name</label>
+                  <input type="text" class="form-control" id="validationCustom02" required>
+                  <div class="valid-feedback">Looks good!</div>
+                </div>
+                <div class="col-12">
+                  <label for="validationCustom03" class="form-label">City</label>
+                  <input type="text" class="form-control" id="validationCustom03" required>
+                  <div class="invalid-feedback">Please provide a valid city</div>
+                </div>
+                <div class="col-12">
+                  <label for="validationCustom04" class="form-label">State</label>
+                  <select id="validationCustom04" class="form-select" required>
+                    <option selected disabled value="">Choose...</option>
+                    <option>Chhattisgarh</option>
+                    <option>Maharashtra</option>
+                    <option>Gujarat</option>
+                    <option>Karnataka</option>
+                    <option>Andhra Pradesh</option>
+                  </select>
+                  <div class="invalid-feedback">Please select a valid state</div>
+                </div>
+                <div class="col-12">
+                  <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="invalidCheck" required>
+                    <label for="invalidCheck" class="form-check-label">
+                      Agree to terms and conditions
+                    </label>
+                    <div class="invalid-feedback">You must agree before submitting.</div>
+                  </div>
+                </div>
+                <div class="col-12 text-center">
+                  <button class="btn btn-dark" type="submit">Submit form</button>
+                </div>
+              </form>
             </div>
+          </div>
         </div>
-    </section><br><br>
+      </div>
+    </section>
 
-
-
-    <!-- this is for iframe section -->
-    <section>
-        <div class="container">
-            <div class="row">
-                <h1 style="text-decoration: underline; text-shadow: grey; text-align: center;">We are here for you</h1><br>
-                <div class="col-6">
-
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d424.2520960414644!2d81.95795823210524!3d20.349652666293476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1749029810490!5m2!1sen!2sin"
-                        width="600" height="400" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
-                </div>
-                <div class="col-md-6">
-                    <div class="contact-card p-4">
-
-
-                        <div class="info-item mb-3">
-                            <i class="bi bi-geo-alt-fill me-2 text-primary"></i>
-                            <span><strong>Address:</strong> Bus stand Nagri</span>
-                        </div>
-
-                        <div class="info-item mb-3">
-                            <i class="bi bi-telephone-fill me-2 text-success"></i>
-                            <span><strong>Phone:</strong> +91 9770586482</span>
-                        </div>
-
-                        <div class="info-item mb-3">
-                            <i class="bi bi-envelope-fill me-2 text-danger"></i>
-                            <span><strong>Email:</strong> Foodies@xyz.com</span>
-                        </div>
-
-                        <div class="info-item mb-3">
-                            <i class="bi bi-youtube me-2 text-danger"></i>
-                            <span><strong>YouTube:</strong>Foodies.com</span>
-                        </div>
-
-                        <div class="info-item mb-3">
-                            <i class="bi bi-instagram me-2 text-warning"></i>
-                            <span><strong>Instagram:</strong> Foodies</span>
-                        </div>
-                    </div>
-                </div>
+    <!-- Contact Section -->
+    <section class="my-5">
+      <div class="container">
+        <h1 class="text-center mb-4" style="text-decoration: underline;">We are here for you</h1>
+        <div class="row g-4">
+          <div class="col-12 col-md-6">
+            <div class="ratio ratio-16x9">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d424.2520960414644!2d81.95795823210524!3d20.349652666293476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1749029810490!5m2!1sen!2sin"
+                style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="contact-card">
+              <div class="info-item"><i class="fa fa-map-marker-alt"></i> <strong>Address:</strong> Bus stand Nagri</div>
+              <div class="info-item"><i class="fa fa-phone"></i> <strong>Phone:</strong> +91 9770586482</div>
+              <div class="info-item"><i class="fa fa-envelope"></i> <strong>Email:</strong> Foodies@xyz.com</div>
+              <div class="info-item"><i class="fab fa-youtube"></i> <strong>YouTube:</strong> Foodies.com</div>
+              <div class="info-item"><i class="fab fa-instagram"></i> <strong>Instagram:</strong> Foodies</div>
+            </div>
+          </div>
         </div>
-    </section><br><br>
+      </div>
+    </section>
 
-    </main>
+  </main>
 
-
-     <!-- the footer is start from here -->
-    <!-- <footer class="site-footer ">
-
-        <div class="container-fluid py-5 ">
-            <div class="row">
-                <div class="col col-md-4 col-lg-3 mb-4">
-                    <h5 class="text-uppercase">Recipes</h5>
-                    <p class="small">
-                        Food is essential for life, providing the energy and nutrients our bodies need to function.
-                        It also brings people together, offering enjoyment, comfort, and cultural connection.
-                    </p>
-                </div>
-                <div class="col col-md-4 col-lg-3 mb-4">
-                    <h5 class="text-uppercase">Section</h5>
-                    <ul class="list-unstyled small">
-                        <li><a href="#" class="text-light text-decoration-none">Home</a></li>
-                        <li><a href="#" class="text-light text-decoration-none">Serving Suggestions</a></li>
-                        <li><a href="#" class="text-light text-decoration-none">Storage Tips</a></li>
-                        <li><a href="#" class="text-light text-decoration-none">Variations</a></li>
-                        <li><a href="#" class="text-light text-decoration-none">Personal Touch</a></li>
-                    </ul>
-                </div>
-                <div class="col col-md-4 col-lg-3 mb-4">
-                    <h5 class="text-uppercase">Community</h5>
-                    <ul class="list-unstyled small">
-                        <li><a href="#" class="text-light text-decoration-none">Call to Action</a></li>
-                        <li><a href="#" class="text-light text-decoration-none">Social Media Links</a></li>
-                        <li><a href="#" class="text-light text-decoration-none">Sponsors</a></li>
-                        <li><a href="#" class="text-light text-decoration-none">Positive Message</a></li>
-                        <li><a href="#" class="text-light text-decoration-none">Customer Care</a></li>
-                    </ul>
-                </div>
-                <div class="col col-md-4 col-lg-3 mb-4">
-                    <h5 class="text-uppercase"><i class="fa fa-circle-user"> Contact Us</i></h5>
-                    <ul class="list-unstyled small">
-                        <li><a href="#" class="text-light text-decoration-none">
-                                <i class="fa fa-phone"> 9770586482</i>
-                            </a></li>
-                        <li><a href="#" class="text-light text-decoration-none">
-                                <i class="fa-brands fa-whatsapp"> 9770586482</i>
-                            </a></li>
-                        <li><a href="#" class="text-light text-decoration-none">
-                                <i class="fa-brands fa-instagram"> Foodies</i>
-                            </a></li>
-
-                        <li><a href="#" class="text-light text-decoration-none">
-                                <i class="fa-brands fa-facebook"> Foodies</i>
-                            </a></li>
-                        <li><a href="#" class="text-light text-decoration-none">
-                                <i class="fas fa-info-circle"> Customer Care</i>
-                            </a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="text-center mt-4">
-                <blockquote class="blockquote">
-                    <p class="mb-1">"Together, we share, support, and grow as a community."</p><br>
-                    <footer class="blockquote-footer text-light">Foodie's <cite title="India"
-                            style="font-style: italic;">The Taste of India</cite>
-                    </footer>
-                </blockquote>
-            </div>
-        </div>
-    </footer> -->
-
-
-       <!-- Footer -->
+  <!-- Footer -->
   <footer class="site-footer text-center">
     <div class="container">
       <div class="row">
-        <div class="col-md-4"><h5>About</h5><p>Food is life. It brings us together.</p></div>
-        <div class="col-md-4"><h5>Quick Links</h5><a href="#">Home</a><br><a href="#">Menu</a><br><a href="#">Contact</a></div>
-        <div class="col-md-4"><h5>Follow Us</h5><div class="social-icons"><a href="#"><i class="fab fa-facebook"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-youtube"></i></a></div></div>
+        <div class="col-12 col-md-4 mb-3">
+          <h5>About</h5>
+          <p>Food is life. It brings us together.</p>
+        </div>
+        <div class="col-12 col-md-4 mb-3">
+          <h5>Quick Links</h5>
+          <a href="#">Home</a><br>
+          <a href="#">Menu</a><br>
+          <a href="#">Contact</a>
+        </div>
+        <div class="col-12 col-md-4 mb-3">
+          <h5>Follow Us</h5>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
       </div>
-      <p class="mt-4 small">© 2025 Jayraj Hotel - The Taste of India</p>
+      <p class="mt-3 small">© 2025 Jayraj Hotel - The Taste of India</p>
     </div>
   </footer>
 
-    <!-- this is for owl carousel script -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-
-
-    <!-- this script is for owl carousel -->
-    <script>
-        $(document).ready(function () {
-            $(".owl-carousel").owlCarousel({
-                loop: true,
-                autoplay: true,
-                margin: 20,
-                nav: false,
-                dots: true,
-                responsive: {
-                    0: { items: 1 },
-                    600: { items: 2 },
-                    1000: { items: 3 }
-                }
-            });
-        });
-
-    </script>
-
-
-
-
-
-    <!-- js code -->
-
-    <!-- this script is for form -->
-    <script>
-        (() => {
-            'use strict'
-            const forms = document.querySelectorAll('.needs-validation');
-
-            Array.from(forms).forEach(form => {
-                form.addEventListener('submit', event => {
-                    if (!form.checkValidity()) {
-                        event.preventDefault()
-                        event.stopPropagation()
-                    }
-
-                    form.classList.add('was-validated')
-                }, false);
-            });
-        })();
-    </script>
-
-    <!-- Bootstrap Bundle -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
-
-
-
